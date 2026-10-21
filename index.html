@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#0F4C5C">
+<title>Piyush Jain | Home</title>
+<style>
+:root{--teal:#0F4C5C;--aqua:#2EC4B6;--coral:#FF6B6B;--sand:#FDF6EC;--char:#1F2933;--card:#FFFFFF;--mu:#5B6B73;--ln:#EADFCF}
+@media (prefers-color-scheme:dark){:root{--sand:#0D1B21;--card:#15282F;--char:#ECF4F3;--mu:#9DB4B8;--ln:#23404A}}
+*{box-sizing:border-box}
+html,body{margin:0;background:var(--sand);color:var(--char);font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Arial,sans-serif}
+.wrap{max-width:760px;margin:0 auto;padding:0 18px 48px}
+.hero{position:relative;overflow:hidden;color:#fff;padding:calc(env(safe-area-inset-top) + 48px) 24px 56px;
+  background:linear-gradient(135deg,var(--teal) 0%,#136B78 55%,var(--aqua) 100%);border-radius:0 0 32px 32px}
+.hero:before,.hero:after{content:"";position:absolute;border-radius:50%}
+.hero:before{width:220px;height:220px;right:-60px;top:-70px;background:var(--coral);opacity:.35}
+.hero:after{width:140px;height:140px;left:-40px;bottom:-60px;background:var(--aqua);opacity:.4}
+.hero .in{position:relative;z-index:1;max-width:760px;margin:0 auto}
+.avatar{width:72px;height:72px;border-radius:22px;display:grid;place-items:center;font-size:30px;font-weight:800;
+  background:var(--coral);color:#fff;box-shadow:0 8px 24px rgba(0,0,0,.2);margin-bottom:16px}
+h1{margin:0;font-size:32px;letter-spacing:-.5px}
+.tag{margin:8px 0 0;opacity:.9;font-size:16px;line-height:1.5}
+.hello{display:inline-block;margin-top:16px;background:rgba(255,255,255,.16);padding:6px 12px;border-radius:20px;font-size:13px}
+h2{font-size:13px;text-transform:uppercase;letter-spacing:1.2px;color:var(--mu);margin:34px 4px 12px;display:flex;align-items:center;gap:10px}
+h2:after{content:"";flex:1;height:1px;background:var(--ln)}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:14px}
+a.tool{display:flex;flex-direction:column;gap:10px;text-decoration:none;color:inherit;background:var(--card);border:1px solid var(--ln);
+  border-radius:20px;padding:20px;box-shadow:0 6px 20px rgba(15,76,92,.07);transition:transform .15s,box-shadow .15s;position:relative;overflow:hidden}
+a.tool:hover,a.tool:focus-visible{transform:translateY(-3px);box-shadow:0 12px 28px rgba(15,76,92,.15);outline:none}
+a.tool:focus-visible{border-color:var(--aqua)}
+a.tool:before{content:"";position:absolute;left:0;top:0;bottom:0;width:5px;background:var(--bar)}
+.ic{width:52px;height:52px;border-radius:16px;display:grid;place-items:center;font-size:26px;background:var(--bg)}
+.tool h3{margin:0;font-size:19px}
+.tool p{margin:0;color:var(--mu);font-size:14px;line-height:1.5}
+.go{margin-top:auto;font-weight:700;font-size:14px;color:var(--teal)}
+@media (prefers-color-scheme:dark){.go{color:var(--aqua)}}
+.pills{display:flex;flex-wrap:wrap;gap:6px}
+.pill{font-size:11px;font-weight:700;padding:3px 9px;border-radius:20px;background:rgba(46,196,182,.15);color:var(--teal)}
+@media (prefers-color-scheme:dark){.pill{color:var(--aqua)}}
+.soon{border:2px dashed var(--ln);border-radius:20px;padding:20px;text-align:center;color:var(--mu);font-size:14px}
+footer{text-align:center;color:var(--mu);font-size:12px;margin-top:40px}
+</style>
+</head>
+<body>
+<header class="hero"><div class="in">
+  <div class="avatar">P</div>
+  <h1>Hi, I'm Piyush 👋</h1>
+  <p class="tag">I build small, handy tools that make everyday life simpler.</p>
+  <span class="hello" id="greet">Welcome</span>
+</div></header>
+
+<main class="wrap">
+  <h2>🧭 Trip Tools</h2>
+  <div class="grid">
+    <a class="tool" href="https://piyushjn-collab.github.io/trip-tools/" style="--bar:var(--aqua);--bg:rgba(46,196,182,.15)">
+      <div class="ic">💸</div>
+      <h3>TripSplit</h3>
+      <p>Split trip expenses with friends. Everyone adds expenses live, and it works out who owes whom.</p>
+      <div class="pills"><span class="pill">Live sync</span><span class="pill">Smart settle-up</span><span class="pill">Trip awards</span></div>
+      <span class="go">Open TripSplit →</span>
+    </a>
+    <a class="tool" href="https://piyushjn-collab.github.io/trip-tools/checksheet.html" style="--bar:var(--coral);--bg:rgba(255,107,107,.15)">
+      <div class="ic">✅</div>
+      <h3>Checksheet</h3>
+      <p>An interactive packing checklist. Mark each item Kept, Later or Not required, and reset in one tap.</p>
+      <div class="pills"><span class="pill">Mobile friendly</span><span class="pill">Saves progress</span></div>
+      <span class="go">Open Checksheet →</span>
+    </a>
+  </div>
+
+  <h2>🚀 Coming soon</h2>
+  <div class="soon">More tools on the way ✨</div>
+
+  <footer>© <span id="yr"></span> Piyush Jain · Made with ☕ in Pune</footer>
+</main>
+<script>
+(function(){
+  var h=new Date().getHours();
+  document.getElementById('greet').textContent=(h<12?'☀️ Good morning':h<17?'🌤️ Good afternoon':'🌙 Good evening')+', welcome!';
+  document.getElementById('yr').textContent=new Date().getFullYear();
+})();
+</script>
+</body>
+</html>
